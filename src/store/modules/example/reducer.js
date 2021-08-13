@@ -1,3 +1,5 @@
+import * as types from '../types';
+
 const initialState = {
   botaoClicado: false,
 };
@@ -5,10 +7,20 @@ const initialState = {
 // eslint-disable-next-line
 export default function (state = initialState, action) {
   switch (action.type) {
-    case 'BOTAO_CLICADO': {
+    case types.BOTAO_CLICADO_SUCCESS: {
       const newState = { ...state };
       newState.botaoClicado = !newState.botaoClicado;
       return newState;
+    }
+
+    case types.BOTAO_CLICADO_FAILURE: {
+      console.log('Deu erro =(');
+      return state;
+    }
+
+    case types.BOTAO_CLICADO_REQUEST: {
+      console.log('Estou fazendo a requisição');
+      return state;
     }
 
     default:
