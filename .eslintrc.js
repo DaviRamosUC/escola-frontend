@@ -17,6 +17,7 @@ module.exports = {
     'prettier/prettier': 'error',
     'react/react-in-jsx-scope': 0,
     'no-unused-vars': 0,
+    'no-console': 0,
     'react/jsx-filename-extension': 0,
     'import/prefer-default-export': 0,
     'react-hooks/rules-of-hooks': 'error',
